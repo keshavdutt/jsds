@@ -23,6 +23,42 @@ class CircularQueue {
         }
         this.queue[this.rear] = element;
         this.length++
+    }
 
+    dequeue() {
+        // check if the queue is empty
+        if (this.isEmpty()) {
+            console.log('Queue is already empty');
+            return;
+        }
+        // removing the item from the front of the queue
+        const removedItem = this.queue[this.front];
+        if (this.front === this.rear) {
+            this.front = -1;
+            this.rear = -1;
+        } else {
+            this.front = (this.front + 1) % this.maxSize;
+        }
+        this.length--;
+        return removedElement;
+    }
+
+    // Return the front element of the queue without removing it
+    peek() {
+        if (this.isEmpty()) {
+            console.log("Queue is empty.");
+            return;
+        }
+        return this.queue[this.front];
+    }
+
+    // Check if the queue is empty
+    isEmpty() {
+        return this.length === 0;
+    }
+
+    // Check if the queue is full
+    isFull() {
+        return this.length === this.maxSize;
     }
 }
