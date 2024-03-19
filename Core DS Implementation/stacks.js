@@ -20,3 +20,9 @@ class Stacks {
         return this.items.length == 0
     }
 }
+
+// Usage
+
+const newStack = new Stacks();
+newStack.push(5);
+console.log(newStack.peek())
