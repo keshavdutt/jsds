@@ -2,6 +2,12 @@
 
 Time Complexity
 
+| Time Complexity | Space Complexity |   |
+| --------------- | ---------------- | - |
+|                 |                  |   |
+|                 |                  |   |
+|                 |                  |   |
+
 **Linked List node in Js**
 
 ```js
@@ -15,7 +21,7 @@ class Node {
 
 **Add operation in Linked List**
 
-- Add a node in the starting of the linked list.
+* Add a node in the starting of the linked list.
 
 ```js
 addAtStarting(element) {
@@ -25,7 +31,7 @@ addAtStarting(element) {
 }
 ```
 
-- Add a node in the ending of the linked list.
+* Add a node in the ending of the linked list.
 
 ```js
 addAtEnd(data) {
@@ -43,7 +49,7 @@ addAtEnd(data) {
 }
 ```
 
-- Add a node after a given node in the linked list.
+* Add a node after a given node in the linked list.
 
 ```js
 // Method to add a node after a given node in the linked list
@@ -68,7 +74,7 @@ addAfterNode(prevNodeData, data) {
 
 **Delete operation in Linked List**
 
-- Delete a node in the starting of the linked list.
+* Delete a node in the starting of the linked list.
 
 ```js
 // Method to delete a node at the beginning of the linked list
@@ -81,7 +87,7 @@ deleteAtBeginning() {
 }
 ```
 
-- Delete a node in the ending of the linked list.
+* Delete a node in the ending of the linked list.
 
 ```js
 // Method to delete a node at the end of the linked list
@@ -105,7 +111,7 @@ deleteAtEnd() {
 }
 ```
 
-- Delete a node after a given node in the linked list.
+* Delete a node after a given node in the linked list.
 
 ```js
 // Method to delete a node after a given node in the linked list
@@ -126,7 +132,7 @@ deleteAfterNode(prevNodeData) {
 }
 ```
 
-- Remove all elements from a linked list of integers that have value val.
+* Remove all elements from a linked list of integers that have value val.
 
 ```js
 const removeElements = function(head, val) {
