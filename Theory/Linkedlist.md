@@ -2,6 +2,12 @@
 
 Time Complexity
 
+
+> [!Important Point]
+>  Linear Type of Data structures
+
+
+
 **Linked List node in Js**
 
 ```js
