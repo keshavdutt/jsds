@@ -205,3 +205,44 @@ var exist = function (board, word) {
     return false;
 
 };
+
+
+function findMatchingAnimations(songs, animations) {
+    const result = {};
+
+    // Parse animations into objects with name and length
+    const parsedAnimations = animations.map(animation => {
+        const [name, length] = animation.split(':');
+        return { name, length: parseInt(length) };
+    });
+
+    // Iterate through each song
+    for (const song of songs) {
+        const [songName, songLength] = song.split(':');
+        const length = parseInt(songLength);
+        let matchedAnimation = null;
+
+        // Find compatible animations for the current song
+        for (const animation of parsedAnimations) {
+            if (length % animation.length === 0) {
+                if (!matchedAnimation || parsedAnimations.indexOf(animation) < parsedAnimations.indexOf(matchedAnimation)) {
+                    matchedAnimation = animation;
+                }
+            }
+        }
+
+        // If a matching animation is found, store it in the result
+        if (matchedAnimation) {
+            result[songName] = matchedAnimation.name;
+        }
+    }
+
+    return result;
+}
+
+// Example usage
+const songs = ['song1:120', 'song2:180', 'song3:150'];
+const animations = ['animation1:60', 'animation2:30', 'animation3:90', 'animation4:20'];
+
+const matchingAnimations = findMatchingAnimations(songs, animations);
+console.log(matchingAnimations);

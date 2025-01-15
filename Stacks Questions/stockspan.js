@@ -64,3 +64,33 @@ console.log(temparray.toString())
  1. find the ngl element and store the index in temp array instead of value
  2. update the values by subtracting the value from index and print the array.
  */
+
+
+
+//  shorter code
+// function calculateSpan(prices) {
+//     const span = [];
+//     const stack = []; // Stack to store indices of days
+  
+//     for (let i = 0; i < prices.length; i++) {
+//       // Pop elements from the stack while the current price is greater than or equal
+//       // to the price at the stack's top index
+//       while (stack.length > 0 && prices[stack[stack.length - 1]] <= prices[i]) {
+//         stack.pop();
+//       }
+  
+//       // If stack is empty, span is the entire length up to the current day
+//       // Otherwise, it's the difference between current index and top index in stack
+//       span[i] = stack.length === 0 ? i + 1 : i - stack[stack.length - 1];
+  
+//       // Push the current index onto the stack
+//       stack.push(i);
+//     }
+  
+//     return span;
+//   }
+  
+//   // Example usage
+//   const prices = [100, 80, 60, 70, 60, 75, 85];
+//   console.log(calculateSpan(prices)); // Output: [1, 1, 1, 2, 1, 4, 6]
+  
